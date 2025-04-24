@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CC___CSCI_100_Task_2
-{
+namespace CommissionCalcC#
+
     internal class SalesPerson
     {
         public string name { get; set; }
