@@ -1,0 +1,22 @@
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe.config
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.pdb
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.AssemblyReference.cache
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\source\repos\CC - CSCI 100 Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.pdb
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe.config
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.pdb
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.AssemblyReference.cache
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\source\repos\CC - CSCI 100 - Task 2\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.pdb
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe.config
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\bin\Debug\CC - CSCI 100 Task 2.pdb
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.AssemblyReference.cache
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.exe
+C:\Users\Owner\Desktop\CSCI 299 - Thesis & Capstone\Portfolio\codycusey.github.io\Projects\SalaryCommissionCalcJava\CC - CSCI 100 Task 2\obj\Debug\CC - CSCI 100 Task 2.pdb

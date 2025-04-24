@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2633D81-6A46-4629-A3D6-E2E245F9AAC9}|CC - CSCI 100 Task 2\\CC - CSCI 100 Task 2.csproj|c:\\users\\owner\\desktop\\csci 299 - thesis \u0026 capstone\\portfolio\\codycusey.github.io\\projects\\salarycommissioncalcjava\\cc - csci 100 task 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2633D81-6A46-4629-A3D6-E2E245F9AAC9}|CC - CSCI 100 Task 2\\CC - CSCI 100 Task 2.csproj|solutionrelative:cc - csci 100 task 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2633D81-6A46-4629-A3D6-E2E245F9AAC9}|CC - CSCI 100 Task 2\\CC - CSCI 100 Task 2.csproj|C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\cc - csci 100 task 2\\salesperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2633D81-6A46-4629-A3D6-E2E245F9AAC9}|CC - CSCI 100 Task 2\\CC - CSCI 100 Task 2.csproj|solutionrelative:cc - csci 100 task 2\\salesperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesPerson.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\CC - CSCI 100 Task 2\\SalesPerson.cs",
+              "RelativeDocumentMoniker": "CC - CSCI 100 Task 2\\SalesPerson.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\CC - CSCI 100 Task 2\\SalesPerson.cs",
+              "RelativeToolTip": "CC - CSCI 100 Task 2\\SalesPerson.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwFUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-01-26T06:07:00.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\CC - CSCI 100 Task 2\\Program.cs",
+              "RelativeDocumentMoniker": "CC - CSCI 100 Task 2\\Program.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\CSCI 299 - Thesis \u0026 Capstone\\Portfolio\\codycusey.github.io\\Projects\\SalaryCommissionCalcJava\\CC - CSCI 100 Task 2\\Program.cs",
+              "RelativeToolTip": "CC - CSCI 100 Task 2\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-01-26T06:07:00.782Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
