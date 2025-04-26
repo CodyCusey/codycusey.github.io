@@ -1,0 +1,60 @@
+CSCI 276 - Application Security
+Lab 8 - Static Code Analysis
+Date: 11/13/2023
+Name: Cody Cusey
+
+Were the items identified actual security issues?
+Where there items identified that that you missed in your code review from the last lab?
+
+1. dvja-master/src/main/java/com/appsecco/example/Login.java
+	Inspection found the same error on line 35 using mathmatical operations instead of method calls.
+	It also found two other similar examples of using mathmatical operations instead of methods.
+	
+   dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+    Lines 68 & 78: the size function in "resultList.size() > 0" could be replaced with a similar isEmpty function with a not operator attached like "!resultList.isEmpty()".
+   
+   If the attacker could somehow manipulate the size of the resultList, then in theory they could make a false negative happen and potentially exploit the else portion to their benefit.
+   In this case, the else statement just returns NULL, so I can't see any real gain to be had from exploiting in that manner.
+   
+2. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	I didn't see an entry anywhere in the inspection that mentioned the depricated hashing algorithm.
+	Not sure if it's configurable to pick up on those specifics, even if implemented correctly.
+	
+	This definitely would be considered a security threat. MD5 hashing is only 128 bits long, and has been "cracked", making it no longer a suitable solution for security.
+	
+3. 3. dvja-master/src/main/java/com/appsecco/dvja/controllers/ResetPassword.java
+	Inspection did find this spelling error too. No security threat here, just a text string in a notification to the user.
+	
+4. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	Inspection found the SQL injection threat, as well as another injection vulnerability in a runtime executable command.
+	The same idiology follows, where if the user can input data into your code, you lose the game.
+	The SQL injection is as simple as adding a " then whatever actual SQL prefferred.
+	The executable injection would take a little more clever manipulation to gain privilages, but nonetheless, is still there for the taking.
+
+5. dvja-master/src/main/java/com/appsecco/dvja/controllers/PingAction.java
+	Inspection found this minor performance concern as well. It's really just an odd little loop, reading in a file line by line and using string concatination to build one giant string.
+	I have to imagine passing this data into an array would be much more efficient and useful.
+	I don't really see a security concern with this little error. It may act sort of like a DOS attack if the input file was long enough. 
+	Maybe slow the machine down enough to allow for another threat to be exploited?
+	
+6. dvja-master/src/main/java/com/appsecco/dvja/controllers/UserAction.java
+	Inspection did find this major security threat, and I'd be upset if it didn't.
+	The "User Edit" function has virtually no validation which will always end poorly.
+	As long as the username is not NULL, and when searched, is a valid userId.
+	The attacker can do very dangerous things like change passwords, change userId, and save the changes.
+	
+7. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	Inspection definitely found and flagged this major security threat as well. This is a core security practice being broken to orders of magnitudes.
+	NEVER STORE OR LOG PASSWORDS! Especially don't store the login and password pairs together... and especially especially not in plain text!
+	This is probably the one vulnerability that is most cringeworth to me. They have/had used other encryption techniques elsewhere (although dated and no salt), but even failed to do that when storing.
+	
+Summary:
+	My focus was primarily on the .java files like instructed so there were hundreds of "missed" items in the other parts of the application (XML, HTML, CSS, etc.).
+	I did take a look at some of those error and noticed a lot of the flags were due to old coding conventions, especially with closing characters.
+	I found a lot of flagged items about "method always returns the same value" which weren't really security risks, but just wasted code and resources.
+	There were a lot of "unsused variables" errors too, which I'm sure could be easily cleaned up or used for their intended purpose.
+	I found a bunch of spelling and grammar errors, which aren't really fair, considering variable names are given, and often not real words. 
+	I feel like the Inspection tool did a poor job of differentiating true grammatic flow, and necessary code characters.
+	This was a fun exercise (coupled with the previous lab) to get better at reading code, trying to understand the logic and implementation, and having enough confidence to call it out.
+	I felt like my abilities grew tremendously, even not having seen one piece of this code function or run!
+	
