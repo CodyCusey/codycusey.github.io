@@ -1,0 +1,36 @@
+CSCI 276 - Application Security
+Lab 8 - Manual Code Review
+Date: 11/13/2023
+Name: Cody Cusey
+
+Identify as many security problems as you can.
+Make a separate file and list the issues found and what file and line number the problems were found on.
+
+1. dvja-master/src/main/java/com/appsecco/example/Login.java
+	Line 35: the length function in "value.length() == 0" could be replaced with the isEmpty function like "value.isEmpty()". Could be a minor performance hit.
+	There's potential for exploiting based on the mathmatical operations, if the attacker could manipulate the length to be not 0.
+	
+2. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	Line 108: the hashing algorithm used is MD5, which is deprecated. 
+	It's only 128 bits and not considered secure by today's standards. Big time security risk.
+	
+3. dvja-master/src/main/java/com/appsecco/dvja/controllers/ResetPassword.java
+	Line 78: Simple spelling error, "ocurred" should be spelled "occurred". 
+	No risk.
+	
+4. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	Line 75: SQL Injection vulnerability! They are using string concatination in "SELECT u FROM User u WHERE u.login = '" + login + "'" to query user login names.
+	By allowing the user to input text into the field, they are essentially allowing the user to write the SQL by simply inserting a ".
+	
+5. dvja-master/src/main/java/com/appsecco/dvja/controllers/PingAction.java
+	Line 53: It appears to be looping and concatinating from the file I/O to create one gigantic string for the output.
+	Resource heavy and unnecessary. Would be more efficient to store each line item in an array for future use.
+	
+6. dvja-master/src/main/java/com/appsecco/dvja/controllers/UserAction.java
+	Lines 73-102 "User Edit": The only validation on the userId in the "user = userService.find(getUserId())" call is that it exists.
+	This sets the user variable to the userId (assuming a valid one is input), then allows more powerful actions to be called on like 
+	"user.setPassword(getPassword()); to change password", "user.setId(getUserId()); to change userId", and "userService.save(user); to save it". 
+	
+7. dvja-master/src/main/java/com/appsecco/dvja/services/UserService.java
+	Lines 93-94: During a password reset, the application is logging the login and password in clear text. 
+	Huge security risk here, A: for logging the passwords at all, B: for not encrypting.
