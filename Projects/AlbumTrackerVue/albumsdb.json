@@ -1,0 +1,125 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "format": "Vinyl",
+      "genre": "Alternative Rock",
+      "artist": "Red Hot Chili Peppers",
+      "title": "Stadium Arcadium",
+      "label": "Warner Bros. Records",
+      "duration": 122.19,
+      "cost": 40,
+      "trackcount": 28,
+      "released": "2009"
+    },
+    {
+      "id": 2,
+      "format": "Cassette",
+      "genre": "Progressive Rock",
+      "artist": "Rush",
+      "title": "2112",
+      "label": "Anthem Records",
+      "duration": 38.45,
+      "cost": 0.69,
+      "trackcount": 6,
+      "released": 1976
+    },
+    {
+      "id": 3,
+      "format": "SACD",
+      "genre": "French House",
+      "artist": "Daft Punk",
+      "title": "Alive 2007",
+      "label": "Virgin Records",
+      "duration": 83.55,
+      "cost": 0.99,
+      "trackcount": 13,
+      "released": 2007
+    },
+    {
+      "id": 4,
+      "format": "8-Track",
+      "genre": "Rock",
+      "artist": "Led Zeppelin",
+      "title": "In Through the Out Door",
+      "label": "Swan Song Records",
+      "duration": 42.35,
+      "cost": 5,
+      "trackcount": 7,
+      "released": 1978
+    },
+    {
+      "id": 5,
+      "format": "MiniDisc",
+      "genre": "Grunge",
+      "artist": "Alice in Chains",
+      "title": "Dirt",
+      "label": "Columbia Records",
+      "duration": 57.37,
+      "cost": 1.33,
+      "trackcount": 13,
+      "released": 1992
+    },
+    {
+      "id": 6,
+      "format": "Cassette",
+      "genre": "Progressive Rock",
+      "artist": "Rush",
+      "title": "Hemispheres",
+      "label": "Anthem Records",
+      "duration": 36.08,
+      "cost": 0.69,
+      "trackcount": 4,
+      "released": 1978
+    },
+    {
+      "id": 7,
+      "format": "Cassette",
+      "genre": "Alternative Rock",
+      "artist": "Red Hot Chili Peppers",
+      "album": "One Hot Minute",
+      "label": "Warner Bros. Records",
+      "duration": 61.14,
+      "cost": 0.25,
+      "trackcount": 13,
+      "released": 1995,
+      "title": "One Hot Minute"
+    },
+    {
+      "id": "123456789",
+      "format": "Vinyl",
+      "genre": "Jazz",
+      "artist": "Miles Davis",
+      "title": "Playing with Miles",
+      "label": "Columbia Records",
+      "duration": "57.01",
+      "cost": "5.00",
+      "trackcount": "7",
+      "released": "1971"
+    },
+    {
+      "id": "8",
+      "format": "Vinyl",
+      "genre": "Shoegaze / Modern Folk",
+      "artist": "My Morning Jacket",
+      "title": "is",
+      "label": "ATO",
+      "duration": "39.01",
+      "cost": "34.99",
+      "trackcount": "10",
+      "released": "2025"
+    },
+    {
+      "id": "9",
+      "format": "Cassette",
+      "genre": "Hip-Hop",
+      "artist": "Eyedea & Abilities",
+      "title": "E&A",
+      "label": "Rhymesayers",
+      "duration": "47.44",
+      "cost": "23.00",
+      "trackcount": "13",
+      "released": "2004"
+    }
+  ]
+}
