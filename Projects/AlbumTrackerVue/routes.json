@@ -1,7 +1,0 @@
-{
-    "/api/*": "/$1",
-    "/album": "/albums",
-    "/add": "/add",
-    "/reset": "/reset"
-  }
-  
