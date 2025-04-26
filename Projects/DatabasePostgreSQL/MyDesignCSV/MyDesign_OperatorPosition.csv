@@ -1,0 +1,36 @@
+OperatorPositionId,Title,HoursRequired,IsBid,GradeId
+1,Smoky Trainee 1,0,0,1
+2,Smoky Operator,40,0,4
+3,Smoky Wrapper,60,0,8
+4,Smoky Mainenance,100,0,12
+5,Smoky Electrician,100,0,13
+6,EH Trainee 1,0,0,1
+7,EH Trainee 2,0,0,2
+8,EH Trainee 3,0,0,3
+9,EH Operator,40,0,4
+10,EH Kilns,60,1,5
+11,EH Attritors,40,0,6
+12,EH BCC,100,1,10
+13,"EH 50""",120,1,11
+14,EH Pyro,120,1,9
+15,EH Belts,80,0,7
+16,EH Wrapper,60,0,8
+17,EH Type B,120,1,12
+18,EH Maintenance,100,0,12
+19,EH Electrician,100,0,13
+20,EH QC,160,0,10
+21,EH Purchasing,0,1,13
+22,EH R&D,0,1,13
+23,EH Engineering,0,1,13
+24,RMP Trainee 1,0,0,1
+25,RMP Trainee 2,0,0,2
+26,RMP Operator,40,0,4
+27,RMP Belts,80,0,7
+28,RMP Wrapper,60,0,8
+29,RMP Mainenance,100,0,12
+30,RMP Electrician,100,0,13
+31,RMP QC,160,0,10
+32,RMP Sales,0,1,13
+33,RMP R&D,0,1,13
+34,Deerfield Sales,0,1,13
+35,Helena Accounting,0,1,13

@@ -1,0 +1,4 @@
+CompanyId,Name,Address,City,State,Zipcode,Type,IsActive,DateFounded
+1,American Chemet Corporation,145 Highway 282,East Helena,MT,59635,Manufacturing,1,6/15/1947 10:15
+2,Royal Metal Powders,89 Black Street,Marysville,TN,77845,Processing,1,2/1/2010 9:12
+3,Smoky Mountain Metals,90 Black Street,Marysville,TN,77845,Recycling,1,10/24/2016 18:38

@@ -1,0 +1,263 @@
+-- In pgAdmin4, use the UI to create a database named "MyDesign".
+-- Run the following script to create all tables, assign foreign key dependencies, 
+-- add data from .CSV files (be mindful of location path), and queries to pull some data.
+
+CREATE TABLE company (
+	companyid serial4 NOT NULL,
+    companyname varchar(50) NOT NULL,
+    address varchar(50) NOT NULL,
+    city varchar(50) NOT NULL,
+    companystate varchar(2) NOT NULL,
+    zipcode int4 NOT NULL,
+    companytype varchar(50) NOT NULL,
+    isactive bool NOT NULL DEFAULT '1',
+    date_founded timestamp(0) NOT NULL,
+    primary key (companyid)
+)
+
+WITHOUT OIDS;
+	
+CREATE TABLE employee (
+	employeeid serial4 NOT NULL,
+	firstname varchar(50) NOT NULL,
+	lastname varchar(50) NOT NULL,
+	address varchar(50) NOT NULL,
+    city varchar(50) NOT NULL,
+    employeestate varchar(2) NOT NULL,
+    zipcode int4 NOT NULL,
+	emergencycontact varchar(100) NOT NULL,
+    isactive bool NOT NULL,
+    employeedepartmentid int4 NOT NULL,
+    employeeshiftid int4 NOT NULL,
+    companyid int4 NOT NULL,
+	payrollid int4 NOT NULL,
+	PRIMARY KEY (employeeid) 
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE employeedepartment (
+	employeedepartmentid serial4 NOT NULL,
+    departmentid int4 NOT NULL,
+	PRIMARY KEY (employeedepartmentid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE employeeshift (
+	employeeshiftid serial4 NOT NULL,
+    shiftid int4 NOT NULL,
+	PRIMARY KEY (employeeshiftid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE department (
+	departmentid serial4 NOT NULL,
+	departmentname varchar(50) NOT NULL,
+	departmentlocation varchar(50) NOT NULL,
+    employeecount int4 NOT NULL,
+    departmentlocationid int4 NOT NULL,
+	departmentpositionid int4 NOT NULL,
+	PRIMARY KEY (departmentid) 
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE shift (
+	shiftid serial4 NOT NULL,
+    shiftname varchar(50) NOT NULL,
+	shiftstart timestamp(0) NOT NULL,
+	shiftend timestamp(0) NOT NULL,
+	duration int4 NOT NULL,
+	employeecount int4 NOT NULL,
+	shiftleadid int4 NOT NULL,
+	PRIMARY KEY (shiftid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE departmentlocation (
+	departmentlocationid serial4 NOT NULL,
+	departmentlocationname varchar(50) NOT NULL,
+	address varchar(50) NOT NULL,
+    city varchar(50) NOT NULL,
+    departmentlocationstate varchar(2) NOT NULL,
+    zipcode int4 NOT NULL,
+	PRIMARY KEY (departmentlocationid) 
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE departmentposition (
+	departmentpositionid serial4 NOT NULL,
+    operatorpositionid int4 NOT NULL,
+	PRIMARY KEY (departmentpositionid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE shiftlead (
+	shiftleadid serial4 NOT NULL,
+    leadoperatorid int4 NOT NULL,
+	PRIMARY KEY (shiftleadid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE leadoperator (
+	leadoperatorid serial4 NOT NULL,
+    leadtype varchar(50) NOT NULL,
+	employeecount int4 NOT NULL,
+	issupervisor BOOL NOT NULL,
+	canapprove BOOL NOT NULL,
+	PRIMARY KEY (leadoperatorid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE operatorposition (
+	operatorpositionid serial4 NOT NULL,
+    title varchar(50) NOT NULL,
+	hoursrequired int4 NOT NULL,
+	isbid BOOL NOT NULL,
+	gradeid int4 NOT NULL,
+	PRIMARY KEY (operatorpositionid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE grade (
+	gradeid serial4 NOT NULL,
+    gradenumber int4 NOT NULL,
+	gradetype VARCHAR(50) NOT NULL,
+	istrainer BOOL NOT NULL,
+	PRIMARY KEY (gradeid)
+)
+
+WITHOUT OIDS;
+
+CREATE TABLE payroll (
+	payrollid serial4 NOT NULL,
+	payrolltype VARCHAR(50) NOT NULL,
+	frequency VARCHAR(50) NOT NULL,
+	amount int4 NOT NULL,
+	bonuspercent decimal(10,4) NOT NULL,
+	PRIMARY KEY (payrollid)
+)
+
+WITHOUT OIDS;
+
+ALTER TABLE employee ADD CONSTRAINT fk_employee_department FOREIGN KEY (employeedepartmentid) REFERENCES employeedepartment (employeedepartmentid);
+ALTER TABLE employee ADD CONSTRAINT fk_employee_shift FOREIGN KEY (employeeshiftid) REFERENCES employeeshift (employeeshiftid);
+ALTER TABLE employee ADD CONSTRAINT fk_employee_company FOREIGN KEY (companyid) REFERENCES company (companyid);
+ALTER TABLE employee ADD CONSTRAINT fk_employee_payroll FOREIGN KEY (payrollid) REFERENCES payroll (payrollid);
+ALTER TABLE employeedepartment ADD CONSTRAINT fk_department FOREIGN KEY (departmentid) REFERENCES department (departmentid);
+ALTER TABLE employeeshift ADD CONSTRAINT fk_shift FOREIGN KEY (shiftid) REFERENCES shift (shiftid);
+ALTER TABLE department ADD CONSTRAINT fk_department_location FOREIGN KEY (departmentlocationid) REFERENCES departmentlocation (departmentlocationid);
+ALTER TABLE department ADD CONSTRAINT fk_department_position FOREIGN KEY (departmentpositionid) REFERENCES departmentposition (departmentpositionid);
+ALTER TABLE shift ADD CONSTRAINT fk_shift_lead FOREIGN KEY (shiftleadid) REFERENCES shiftlead (shiftleadid);
+ALTER TABLE shiftlead ADD CONSTRAINT fk_leadoperator FOREIGN KEY (leadoperatorid) REFERENCES leadoperator (leadoperatorid);
+ALTER TABLE departmentposition ADD CONSTRAINT fk_position FOREIGN KEY (operatorpositionid) REFERENCES operatorposition (operatorpositionid);
+ALTER TABLE operatorposition ADD CONSTRAINT fk_position_grade FOREIGN KEY (gradeid) REFERENCES grade (gradeid);
+
+-- data import below.  This assumes your CSV files are in the drive and folder specified.
+
+COPY grade FROM 'C:/MyDesignCSV/MyDesign_Grade.csv' DELIMITER ',' CSV HEADER;
+COPY company FROM 'C:/MyDesignCSV/MyDesign_Company.csv' DELIMITER ',' CSV HEADER;
+COPY payroll FROM 'C:/MyDesignCSV/MyDesign_Payroll.csv' DELIMITER ',' CSV HEADER;
+COPY departmentlocation FROM 'C:/MyDesignCSV/MyDesign_DeptLocation.csv' DELIMITER ',' CSV HEADER;
+COPY leadoperator FROM 'C:/MyDesignCSV/MyDesign_LeadOperator.csv' DELIMITER ',' CSV HEADER;
+COPY operatorposition FROM 'C:/MyDesignCSV/MyDesign_OperatorPosition.csv' DELIMITER ',' CSV HEADER;
+COPY shiftlead FROM 'C:/MyDesignCSV/MyDesign_ShiftLead.csv' DELIMITER ',' CSV HEADER;
+COPY departmentposition FROM 'C:/MyDesignCSV/MyDesign_DeptPosition.csv' DELIMITER ',' CSV HEADER;
+COPY department FROM 'C:/MyDesignCSV/MyDesign_Department.csv' DELIMITER ',' CSV HEADER;
+COPY shift FROM 'C:/MyDesignCSV/MyDesign_Shift.csv' DELIMITER ',' CSV HEADER;
+COPY employeedepartment FROM 'C:/MyDesignCSV/MyDesign_EmployeeDept.csv' DELIMITER ',' CSV HEADER;
+COPY employeeshift FROM 'C:/MyDesignCSV/MyDesign_EmployeeShift.csv' DELIMITER ',' CSV HEADER;
+COPY employee FROM 'C:/MyDesignCSV/MyDesign_Employee.csv' DELIMITER ',' CSV HEADER;
+
+-- Queries to run, also in the excel file with output examples.
+-- Uncomment each query to see the results! (Ctrl + /)
+
+-- -- 1. Find all the Employees (First and Last Name) at Companies that are not American Chemet Corporation, and there designated shifts.						
+						
+-- SELECT (Employee.EmployeeId)	
+	
+-- 	,FirstName
+	
+-- 	,LastName
+	
+-- 	,Company.CompanyName
+	
+-- 	,Shift.ShiftName
+	
+-- FROM Employee INNER JOIN 	
+	
+-- 	EmployeeShift ON Employee.EmployeeshiftID = EmployeeShift.EmployeeshiftID INNER JOIN
+	
+-- 	Shift ON Employeeshift.shiftId = shift.shiftId INNER JOIN
+	
+-- 	Company ON Employee.CompanyId = Company.CompanyId
+	
+-- WHERE company.companyname != 'American Chemet Corporation';
+
+-- -- 2. Find all of the Employees (First and Last) that are Production Supervisors at American Chemet Corporation						
+
+-- SELECT (Employee.EmployeeId)	
+	
+-- 	,FirstName
+	
+-- 	,LastName
+	
+-- 	,Company.CompanyName
+	
+-- 	,Department.DepartmentName
+	
+-- 	,Shift.ShiftName
+	
+-- 	,LeadOperator.LeadType
+	
+-- FROM Employee INNER JOIN 	
+	
+-- 	EmployeeShift ON Employee.EmployeeshiftID = EmployeeShift.EmployeeshiftID INNER JOIN
+	
+-- 	Shift ON Employeeshift.shiftId = shift.shiftId INNER JOIN
+	
+-- 	ShiftLead ON Shift.ShiftLeadId = ShiftLead.ShiftLeadId INNER JOIN
+	
+-- 	LeadOperator ON ShiftLead.LeadOperatorId = LeadOperator.LeadOperatorId INNER JOIN
+	
+-- 	Company ON Employee.CompanyId = Company.CompanyId INNER JOIN
+	
+-- 	EmployeeDepartment ON Employee.EmployeeDepartmentId = EmployeeDepartment.EmployeeDepartmentID INNER JOIN
+	
+-- 	Department ON EmployeeDepartment.DepartmentID = Department.DepartmentID
+	
+-- WHERE company.companyname = 'American Chemet Corporation' AND LeadOperator.LeadType LIKE '%Supervisor%' AND Department.DepartmentName = 'Production'	
+	
+-- ORDER BY Shiftname;
+
+-- -- 3. Find the Average Bonus Amount for Salaried Employees at Royal Metal Powders						
+						
+-- SELECT AVG(Payroll.bonuspercent)*100 as AverageBonus	
+	
+-- FROM Employee INNER JOIN 	
+	
+-- 	Payroll ON Employee.PayrollId = Payroll.PayrollId INNER JOIN
+	
+-- 	Company ON Employee.CompanyId = Company.CompanyId
+	
+-- WHERE company.companyname = 'Royal Metal Powders' AND Payroll.PayrollType LIKE '%Salary%';
+	
+-- -- 4. Find the Total Amount Paid Per Pay Period for Hourly Employees at American Chemet Corporation						
+						
+-- SELECT SUM(Payroll.Amount) as TotalWages	
+	
+-- FROM Employee INNER JOIN 	
+	
+-- 	Payroll ON Employee.PayrollId = Payroll.PayrollId INNER JOIN
+	
+-- 	Company ON Employee.CompanyId = Company.CompanyId
+	
+-- WHERE company.companyname = 'American Chemet Corporation' AND Payroll.PayrollType LIKE '%Hourly%';

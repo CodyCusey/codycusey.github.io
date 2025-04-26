@@ -1,0 +1,14 @@
+GradeId,GradeNumber,GradeType,IsTrainer
+1,1,Trainee,0
+2,2,Trainee,0
+3,3,Trainee,0
+4,1,Non-Trainee,0
+5,2,Non-Trainee,0
+6,3,Non-Trainee,0
+7,4,Non-Trainee,0
+8,5,Non-Trainee,0
+9,6,Non-Trainee,1
+10,7,Non-Trainee,1
+11,8,Non-Trainee,1
+12,9,Non-Trainee,1
+13,10,Non-Trainee,1

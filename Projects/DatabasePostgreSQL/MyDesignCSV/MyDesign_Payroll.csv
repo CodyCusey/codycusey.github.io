@@ -1,0 +1,17 @@
+PayrollId,PayrollType,Frequency,Amount,BonusPercent
+1,SalaryLow,BiMonthly,2000,0.055
+2,SalaryMid,BiMonthly,3000,0.0575
+3,SalaryHigh,BiMonthly,4000,0.06
+4,HourlyTrain1,EveryOtherWeek,800,0.04
+5,HourlyTrain2,EveryOtherWeek,1000,0.04
+6,HourlyTrain3,EveryOtherWeek,1200,0.04
+7,HourlyGrade1,EveryOtherWeek,1400,0.0425
+8,HourlyGrade2,EveryOtherWeek,1450,0.0425
+9,HourlyGrade3,EveryOtherWeek,1500,0.045
+10,HourlyGrade4,EveryOtherWeek,1550,0.045
+11,HourlyGrade5,EveryOtherWeek,1600,0.0475
+12,HourlyGrade6,EveryOtherWeek,1650,0.0475
+13,HourlyGrade7,EveryOtherWeek,1700,0.05
+14,HourlyGrade8,EveryOtherWeek,1750,0.05
+15,HourlyGrade9,EveryOtherWeek,1800,0.0525
+16,HourlyGrade10,EveryOtherWeek,1850,0.0525

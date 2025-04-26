@@ -1,0 +1,36 @@
+DepartmentId,Name,Location,EmployeeCount,DepartmentLocationId,DepartmentPositionId
+1,Sales,Deerfield,10,2,34
+2,Accounting,Helena,8,3,35
+3,Production,Smoky,19,5,1
+4,Production,Smoky,19,5,2
+5,Production,Smoky,19,5,3
+6,Production,Smoky,19,5,4
+7,Production,Smoky,19,5,5
+8,Production,East Helena,151,1,6
+9,Production,East Helena,151,1,7
+10,Production,East Helena,151,1,8
+11,Production,East Helena,151,1,9
+12,Production,East Helena,151,1,10
+13,Production,East Helena,151,1,11
+14,Production,East Helena,151,1,12
+15,Production,East Helena,151,1,13
+16,Production,East Helena,151,1,14
+17,Production,East Helena,151,1,15
+18,Production,East Helena,151,1,16
+19,Production,East Helena,151,1,17
+20,Production,East Helena,151,1,18
+21,Production,East Helena,151,1,19
+22,QC,East Helena,9,1,20
+23,Purchasing,East Helena,12,1,21
+24,R&D,East Helena,9,1,22
+25,Engineering,East Helena,7,1,23
+26,Production,RMP,40,4,24
+27,Production,RMP,40,4,25
+28,Production,RMP,40,4,26
+29,Production,RMP,40,4,27
+30,Production,RMP,40,4,28
+31,Production,RMP,40,4,29
+32,Production,RMP,40,4,30
+33,Sales,RMP,5,4,32
+34,R&D,RMP,3,4,33
+35,QC,RMP,4,4,31
