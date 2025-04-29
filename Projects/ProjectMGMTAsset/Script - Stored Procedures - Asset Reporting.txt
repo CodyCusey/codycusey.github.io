@@ -1,0 +1,160 @@
+-- Create SP for 50" Mill
+
+USE ACC
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Cody Cusey
+-- Create Date: Mar/20/2025
+-- Description:	50" Mill Information for SSRS Report
+-- =============================================
+
+CREATE PROCEDURE [!_ACC_sp_50"_Mill_Report]
+	-- Add the parameters for the stored procedure here
+	@AssetName varchar(35),
+	@StartDate date,
+	@EndDate date
+
+AS
+
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+  	-- Insert statements for procedure here
+SELECT
+	ACC_Assets.AssetID,
+	ACC_Assets.AssetName as 'Asset Name',
+	ACC_AssetData.EntryDate as 'Entry Date',
+	ACC_AssetData.Shift as 'Shift',
+	ACC_AssetData.Text1 as 'Feed',
+	ACC_AssetData.Batch1 as 'Batch #',
+	ACC_AssetData.Int2 as 'No. Dumped',
+	ACC_AssetData.Text2 as 'Expected End Use',
+	ACC_AssetData.Int3 as 'No. Totes Made',
+	ACC_AssetData.Int4 as 'MS20 Fines Totes Made',
+	ACC_AssetData.Int5 as 'Mixer #'
+
+FROM ACC_Assets
+INNER JOIN ACC_AssetData ON ACC_Assets.AssetID = ACC_AssetData.AssetID
+
+WHERE
+	ACC_Assets.AssetName = @AssetName AND
+	ACC_AssetData.EntryDate BETWEEN @StartDate AND @EndDate
+
+END
+GO
+
+
+
+-- To Test
+
+EXEC [!_ACC_sp_50"_Mill_Report] @AssetName='50" Mill',@StartDate='2025-02-14',@EndDate='2025-02-15'
+
+
+
+-- Actual Query
+
+SELECT
+	ACC_Assets.AssetID,
+	ACC_Assets.AssetName as 'Asset Name',
+	ACC_AssetData.EntryDate as 'Entry Date',
+	ACC_AssetData.Shift as 'Shift',
+	ACC_AssetData.Text1 as 'Feed',
+	ACC_AssetData.Batch1 as 'Batch #',
+	ACC_AssetData.Int2 as 'No. Dumped',
+	ACC_AssetData.Text2 as 'Expected End Use',
+	ACC_AssetData.Int3 as 'No. Totes Made',
+	ACC_AssetData.Int4 as 'MS20 Fines Totes Made',
+	ACC_AssetData.Int5 as 'Mixer #'
+
+FROM ACC_Assets
+INNER JOIN ACC_AssetData ON ACC_Assets.AssetID = ACC_AssetData.AssetID
+
+WHERE
+	ACC_Assets.AssetName = '50" Mill' AND
+	ACC_AssetData.EntryDate BETWEEN '2025-02-14' AND '2025-02-15'
+
+
+
+-- Updated WHERE for Stored Procedure
+
+WHERE
+	ACC_Assets.AssetName = @AssetName AND
+	ACC_AssetData.EntryDate BETWEEN @StartDate AND @EndDate
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-- Create SP for #1 Classifier
+
+USE ACC
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Cody Cusey
+-- Create Date: Mar/20/2025
+-- Description:	50" Mill Information for SSRS Report
+-- =============================================
+
+CREATE PROCEDURE [!_ACC_sp_#1_Classifier_Report]
+	-- Add the parameters for the stored procedure here
+	@AssetName varchar(35),
+	@StartDate date,
+	@EndDate date
+
+AS
+
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+  	-- Insert statements for procedure here
+SELECT
+	ACC_Assets.AssetID,
+	ACC_Assets.AssetName as 'Asset Name',
+	ACC_AssetData.EntryDate as 'Entry Date',
+	ACC_AssetData.Shift as 'Shift',
+	ACC_AssetData.Int3 as 'COARSE',
+	ACC_AssetData.Totes1 as '(C) Tote #',
+	ACC_AssetData.Weight1 as '(C) Gross Weight',
+	ACC_AssetData.Int1 as '(C) Tare',
+	ACC_AssetData.Weight2 as '(C) Net Weight',
+	ACC_AssetData.Float1 as '(C) Hour Meter Start',
+	ACC_AssetData.Float2 as '(C) Hour Meter Stop',
+	ACC_AssetData.Time1 as '(C) Run Time',
+	ACC_AssetData.Weight3 as '(C) Pounds Per Hour',
+	ACC_AssetData.Int4 as 'FINES',
+	ACC_AssetData.Totes2 as '(F) Tote #',
+	ACC_AssetData.Weight4 as '(F) Gross Weight',
+	ACC_AssetData.Int2 as '(F) Tare',
+	ACC_AssetData.Weight5 as '(F) Net Weight',
+	ACC_AssetData.Float4 as '(F) Hour Meter Start',
+	ACC_AssetData.Float5 as '(F) Hour Meter End'
+
+FROM ACC_Assets
+INNER JOIN ACC_AssetData ON ACC_Assets.AssetID = ACC_AssetData.AssetID
+
+WHERE
+	ACC_Assets.AssetName = @AssetName AND
+	ACC_AssetData.EntryDate BETWEEN @StartDate AND @EndDate
+
+END
+GO
+
+-- To Run the SP
+
+EXEC [!_ACC_sp_#1_Classifier_Report] @AssetName='#1 Classifier Log',@StartDate='2025-02-17',@EndDate='2025-02-19'

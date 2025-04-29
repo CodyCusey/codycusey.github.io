@@ -1,0 +1,41 @@
+USE [ACCT]
+GO
+
+/****** Object:  StoredProcedure [dbo].[!_ACC_sp_Core]    Script Date: 4/15/2025 10:34:41 AM ******/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Cody Cusey
+-- Create Date: Mar/20/2025
+-- Description:	Wrapper SP for SSRS Report
+-- =============================================
+
+ALTER PROCEDURE [dbo].[!_ACC_sp_Core]
+	@AssetID INT
+
+AS
+BEGIN
+SET NOCOUNT ON;
+
+DECLARE @SQLSelect varchar(1000)
+
+EXEC [!_ACC_sp_Asset_Report] @AssetID = @AssetID, @SQLText = @SQLSelect OUTPUT
+
+SET @SQLSelect = Concat('SELECT ', @SQLSelect, ' FROM ACC_AssetData WHERE ACC_AssetData.AssetID = ', @AssetID)
+
+EXEC (@SQLSelect)
+
+END
+
+
+
+
+
+
+
+-- TO EXECUTE THE CORE SP
+EXEC [!_ACC_sp_Core] @AssetID = 29

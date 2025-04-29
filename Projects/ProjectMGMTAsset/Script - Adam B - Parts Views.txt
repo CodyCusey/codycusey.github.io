@@ -1,0 +1,924 @@
+/*******************************************************
+**     Script for all Adam B. Part Inventory views.   **
+**   WHERE clause logic consistent across all except  **
+**     "601_602_603" and "75X" views. They required   **
+**       slight additions to ensure proper query.     **
+*******************************************************/
+
+
+CREATE VIEW [!acc_parts_125_inventory]	
+AS	
+/******************************************	
+**       This is for "125" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '125%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO	
+	
+CREATE VIEW [!acc_parts_200_inventory]	
+AS	
+/******************************************	
+**       This is for "200" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '200%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO	
+
+CREATE VIEW [!acc_parts_205_inventory]	
+AS	
+/******************************************	
+**       This is for "205" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '205%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_225_inventory]	
+AS	
+/******************************************	
+**       This is for "225" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '225%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_226_inventory]	
+AS	
+/******************************************	
+**       This is for "226" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '226%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_230_inventory]	
+AS	
+/******************************************	
+**       This is for "230" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '230%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_250_inventory]	
+AS	
+/******************************************	
+**       This is for "250" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '250%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_275_inventory]	
+AS	
+/******************************************	
+**       This is for "275" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '275%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_301_inventory]	
+AS	
+/******************************************	
+**       This is for "301" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '301%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_325_inventory]	
+AS	
+/******************************************	
+**       This is for "325" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '325%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_350_inventory]	
+AS	
+/******************************************	
+**       This is for "350" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '350%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_355_inventory]	
+AS	
+/******************************************	
+**       This is for "355" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '355%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_360_inventory]	
+AS	
+/******************************************	
+**       This is for "360" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '360%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_375_inventory]	
+AS	
+/******************************************	
+**       This is for "375" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '375%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_400_inventory]	
+AS	
+/******************************************	
+**       This is for "400" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '400%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_410_inventory]	
+AS	
+/******************************************	
+**       This is for "410" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '410%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_450_inventory]	
+AS	
+/******************************************	
+**       This is for "450" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '450%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_500_inventory]	
+AS	
+/******************************************	
+**       This is for "500" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '500%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_520_inventory]	
+AS	
+/******************************************	
+**       This is for "520" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '520%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_530_inventory]	
+AS	
+/******************************************	
+**       This is for "530" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '530%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_540_inventory]	
+AS	
+/******************************************	
+**       This is for "540" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '540%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_550_inventory]	
+AS	
+/******************************************	
+**       This is for "550" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '550%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_560_inventory]	
+AS	
+/******************************************	
+**       This is for "560" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '560%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_575_inventory]	
+AS	
+/******************************************	
+**       This is for "575" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '575%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_580_inventory]	
+AS	
+/******************************************	
+**       This is for "580" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '580%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_590_inventory]	
+AS	
+/******************************************	
+**       This is for "590" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '590%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_600_601_602_inventory]	
+AS	
+/******************************************	
+**   This is for "600, 601, 602" Parts   **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR BETWEEN '599%' AND '603%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_620_inventory]	
+AS	
+/******************************************	
+**       This is for "620" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '620%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_630_inventory]	
+AS	
+/******************************************	
+**       This is for "630" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '630%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_640_inventory]	
+AS	
+/******************************************	
+**       This is for "640" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '640%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_650_inventory]	
+AS	
+/******************************************	
+**       This is for "650" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '650%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_660_inventory]	
+AS	
+/******************************************	
+**       This is for "660" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '660%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_670_inventory]	
+AS	
+/******************************************	
+**       This is for "670" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '670%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_680_inventory]	
+AS	
+/******************************************	
+**       This is for "680" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '680%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_690_inventory]	
+AS	
+/******************************************	
+**       This is for "690" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '690%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_700_inventory]	
+AS	
+/******************************************	
+**       This is for "700" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '700%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+CREATE VIEW [!acc_parts_710_inventory]	
+AS	
+/******************************************	
+**       This is for "710" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '710%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_720_inventory]	
+AS	
+/******************************************	
+**       This is for "720" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '720%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_725_inventory]	
+AS	
+/******************************************	
+**       This is for "725" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '725%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_726_inventory]	
+AS	
+/******************************************	
+**       This is for "726" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '726%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_752_inventory]	
+AS	
+/******************************************	
+**       This is for "752" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '752%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_75X_inventory]	
+AS	
+/******************************************	
+**       This is for "75X" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR BETWEEN '749%' AND '760%' AND LEN(IM.ITEMNMBR) > 3 AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_775_inventory]	
+AS	
+/******************************************	
+**       This is for "775" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '775%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_780_inventory]	
+AS	
+/******************************************	
+**       This is for "780" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '780%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_800_inventory]	
+AS	
+/******************************************	
+**       This is for "800" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '800%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_825_inventory]	
+AS	
+/******************************************	
+**       This is for "825" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '825%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_850_inventory]	
+AS	
+/******************************************	
+**       This is for "850" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '850%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_875_inventory]	
+AS	
+/******************************************	
+**       This is for "875" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '875%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_900_inventory]	
+AS	
+/******************************************	
+**       This is for "900" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '900%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_970_inventory]	
+AS	
+/******************************************	
+**       This is for "970" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '970%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO
+
+CREATE VIEW [!acc_parts_980_inventory]	
+AS	
+/******************************************	
+**       This is for "980" Parts         **	
+**     Created: 021325 – Cody Cusey      **	
+******************************************/	
+SELECT	
+	IM.ITEMNMBR AS 'Item Number',
+	IM.ITEMDESC AS 'Item Description',
+	SUM(T.Quantity) AS 'QTY On Hand',
+	T.BIN AS 'Bin Number',
+	T.LOCNCODE AS 'Location Code'
+FROM IV00101 AS IM	
+	LEFT JOIN IV00112 T ON T.ITEMNMBR = IM.ITEMNMBR 
+WHERE IM.ITEMNMBR LIKE '980%' AND T.LOCNCODE = 'EH' AND IM.ITEMTYPE != 2	
+GROUP BY IM.ITEMNMBR, T.LOCNCODE, T.BIN, IM.ITEMDESC, IM.ITMCLSCD	
+GO

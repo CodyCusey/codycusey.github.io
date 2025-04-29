@@ -1,0 +1,152 @@
+USE ACCT
+
+DECLARE @AssetID Int;
+DECLARE @SQLText nvarchar(1000);
+
+SET @AssetID = 6
+SET @SQLText = ''
+
+DECLARE Asset_Report_Cursor 
+CURSOR FOR
+
+SELECT FieldMapped
+
+FROM ACC_AssetInfo
+
+WHERE AssetID = @AssetID
+
+DECLARE @FieldMapped varchar(250)
+
+OPEN Asset_Report_Cursor;
+
+FETCH FROM Asset_Report_Cursor
+	INTO @FieldMapped
+
+SET @SQLText = 'ACC_AssetData.AssetID'
+
+WHILE @@FETCH_STATUS = 0
+
+BEGIN
+
+SET @SQLText = @SQLText + ', ' + @FieldMapped
+
+FETCH NEXT FROM Asset_Report_Cursor
+	INTO @FieldMapped
+	
+END
+
+CLOSE Asset_Report_Cursor;
+
+DEALLOCATE Asset_Report_Cursor;
+
+PRINT @SQLText;
+
+-- OUTPUT
+ACC_AssetData.AssetID, Text1, Batch1, Int2, Text2, Int3, Int4, Int5, Weight1, Weight2, Comment1
+
+-- QUERY
+SELECT ACC_AssetData.AssetID, Text1, Batch1, Int2, Text2, Int3, Int4, Int5, Weight1, Weight2, Comment1
+FROM ACC_AssetData
+WHERE ACC_AssetData.AssetID = 6
+
+-- OUTPUT
+AssetID	Text1						Batch1		Int2	Text2					Int3	Int4	Int5	Weight1	Weight2	Comment1
+6	PYRO						400		19	LoLo Tint LM Lot: Z1589			0	5	53	0	0	
+6	PYRO						400		11	ATTRITOR FEED	11			0	0	46057	44500	
+6	PYRO ALTER (AC24285-1)				295LM		10	CHEM COPP HP III PURPLE			0	0	54	41750	40220	
+6	PYRO						295LM		0	LOLO TINT LM LOT: Z1594			0	5	53	0	45000	
+6	PYRO						295LM		10	LOLO TINT 97 LOT: Z1599			0	0	53	41700	25000	
+6	PYRO						295		10	LOLO TINT 97 W/OLEIC			0	3	54	42230	25338	
+6	PYRO OMNI (AC24114-4E)				295LM		10	LOLO TINT 97 (OLEIC)			0	3	54	42223	30900	
+6	PYRO OMNI AC24289-5 & PYRO ATLAS AC24249-5	295LM		14	LOLO TINT LM (Z1601)			0	6	53	58450	57450	
+6	PYRO						400		10	ATTRITOR FEED	11			0	0	41770	43000	
+6	PYRO ECOVERY AC24133-4C BELT PURPLE		295 LM		11	RED COPP 97N	0			0	54	43922	42500	
+6	PYRO						295/295LM	7	LOLO TINT LM LOT: Z1635			0	0	54	0	0	
+6	PYRO						295		0	CHEM COPP HPIII (IKO) LOT: Z1640	0	0	54	45947	45000	
+6	PYRO						295LM		14	CHEM COPP HPIII (IKO) LOT: Z1640	0	3	54	75000	45104	
+
+
+
+
+
+
+
+
+
+-- START THE WHOLE THING MAYBE???? --
+USE ACCT
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Cody Cusey
+-- Create Date: April/11/2025
+-- Description:	Asset Information for SSRS Report
+-- =============================================
+
+CREATE PROCEDURE [!_ACC_sp_Asset_Report]
+	-- Add the parameters for the stored procedure here
+	@AssetID Int
+	--@StartDate date,
+	--@EndDate date
+
+AS
+
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+SET NOCOUNT ON;
+
+  	-- Insert statements for procedure here
+--DECLARE @AssetID Int;
+DECLARE @SQLText nvarchar(1000);
+
+SET @AssetID = @AssetID
+SET @SQLText = ''
+
+DECLARE Asset_Report_Cursor 
+CURSOR FOR
+
+SELECT FieldMapped
+
+FROM ACC_AssetInfo
+
+WHERE AssetID = @AssetID
+
+DECLARE @FieldMapped varchar(250)
+
+OPEN Asset_Report_Cursor;
+
+FETCH FROM Asset_Report_Cursor
+	INTO @FieldMapped
+
+SET @SQLText = 'ACC_AssetData.AssetID'
+
+WHILE @@FETCH_STATUS = 0
+
+BEGIN
+
+SET @SQLText = @SQLText + ', ' + @FieldMapped
+
+FETCH NEXT FROM Asset_Report_Cursor
+	INTO @FieldMapped
+	
+END
+
+CLOSE Asset_Report_Cursor;
+
+DEALLOCATE Asset_Report_Cursor;
+
+SELECT @SQLText
+FROM ACC_AssetData
+WHERE ACC_AssetData.AssetID = @AssetID
+
+END
+GO
+
+-- END THE WHOLE THING MAYBE???? --
+
+

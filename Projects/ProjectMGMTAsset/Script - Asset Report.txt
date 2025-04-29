@@ -1,0 +1,59 @@
+USE [ACCT]
+GO
+
+/****** Object:  StoredProcedure [dbo].[!_ACC_sp_Asset_Report]    Script Date: 4/15/2025 9:26:28 AM ******/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Cody Cusey
+-- Create Date: Mar/20/2025
+-- Description:	Asset Information for SSRS Report
+-- =============================================
+
+ALTER PROCEDURE [dbo].[!_ACC_sp_Asset_Report]
+	@AssetID INT,
+	@SQLText varchar(1000) OUTPUT
+
+AS
+BEGIN
+SET NOCOUNT ON;
+
+SET @AssetID = @AssetID
+SET @SQLText = ''
+
+DECLARE Asset_Report_Cursor 
+CURSOR FOR
+
+SELECT FieldMapped, textboxName
+FROM ACC_AssetInfo
+WHERE AssetID = @AssetID
+
+DECLARE @FieldMapped varchar(250)
+DECLARE @textboxName varchar(250)
+
+OPEN Asset_Report_Cursor;
+
+FETCH FROM Asset_Report_Cursor
+	INTO @FieldMapped, @textboxName
+
+SET @SQLText = @FieldMapped + ' as ''' + @textboxName + ''''
+
+WHILE @@FETCH_STATUS = 0
+
+BEGIN
+
+FETCH NEXT FROM Asset_Report_Cursor
+	INTO @FieldMapped, @textboxName
+	IF @@FETCH_STATUS = 0
+		SET @SQLText = @SQLText + ', ' + @FieldMapped + ' as ''' + @textboxName + ''''
+	ELSE
+		SET @SQLText = @SQLText
+
+END
+CLOSE Asset_Report_Cursor;
+DEALLOCATE Asset_Report_Cursor;
+END
