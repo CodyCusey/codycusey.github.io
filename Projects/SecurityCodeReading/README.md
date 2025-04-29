@@ -8,16 +8,16 @@ Action: By having access to source code, like in these examples, I was able to s
 
 Result: I successfully completed my code review and vulnerability analysis. I was able to determine many potential vulnerability concerns within the existing application code and provide appropriate actions to help improve overall application security through simple code fixes. This was a really fun and useful exercise that felt it had a ton of real world application. The ability to dig into an application, website, or database, understand what is happening, how it should or shouldn't be happening, and be able to fix, update, or maintain is an absolutely essential skill for the emerging technology professional's toolkit.
 
-Reflection: I was interested in testing my own code reading skill and overall knowledge of applications and application security. By spending time analyzing each section of code, I was able to confidently identify security threats and provide reccomendations to fix.
+Reflection: I was interested in testing my own code reading skills and overall knowledge of applications and application security. By spending time analyzing each section of code, I was able to confidently identify security threats and provide reccomendations to fix.
 
-## Value.length improper validation"
+## value.length improper validation"
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/174c7385fe651851874073d0fb8c160bda324a02/Projects/CommissionCalcC%23/assets/Screenshot%202025-04-27%20141542.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190553.png)
 
-## First Scenario Input
+## SQL Injection Vulnerability
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/174c7385fe651851874073d0fb8c160bda324a02/Projects/CommissionCalcC%23/assets/Screenshot%202025-04-27%20141329.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190654.png)
 
-## All Scenarios Input
+## Password Logging in clear text
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/174c7385fe651851874073d0fb8c160bda324a02/Projects/CommissionCalcC%23/assets/Screenshot%202025-04-27%20141357.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190725.png)
