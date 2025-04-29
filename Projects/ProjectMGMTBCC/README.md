@@ -1,51 +1,13 @@
 # ACC BCC Expansion Project
 
-My Album Tracking Application I created as a single page application (SPA) using Vue.
+My hypothetical Project Management Project Plan for BCC Expansion at American Chemet Corporation.
 
-Challenge: Design a web application that allows the user to add, delete, edit, and view albums in their collection.
+Challenge: Create a complete project plan for a hypothetical production expansion at American Chemet Corporation.
 
-Context: For the final project in my Client-Side Programming class I needed to create some type of web application. I created a web app that allows the user to manage their physical media library in a digital format. The single page configuration allows for a quick and responsive UI for adding new albums, editing information on previous entries, deleting entries, or simply viewing their collection.
+Context: For the final project in my Project Management class, I had to prepare a complete project plan for a real or fictional scenario. Using the concepts learned I was able to produce documents that include: stakeholder management, resource gathering, resource planning, risk management, quality and communications planning, as well as several others, this project includes all of the documents covering these topics.
 
-Action: Using Visual Studio Code and Vue, I created a Home view that clearly directs the user to the options available. From the Album Info selection, the user is presented with a list of all items in their collection. This is where the user can peruse their media library, and make a selection for editing. Once in the editing view, the user can alter certain attributes to update the selected album to better represent the version in their collection. From the Add Album selection, the user can enter in information to be added as a new entry into the collection. The AlbumID was left as a manual entry, with uniqueness validated intentionally. Certain cataloguing systems having specific naming conventions and this flexibility allows user to curate to their organizational specifications. This app is designed to only run on the client side, so there is technically no back-end development. The data is collected and stored in JSON formatting in a local file build into the app. The use of an API handles all the CRUD operations to make use of the JSON data and data field entry.
+Action: In this quasi-fictional project scenario, I am the project manager for this project and along with the many other made-up team members, I created a communication plan and team charter to show roles and responsibilites along with work needing to be accomplished in a Project Schedule and Work Breakdown Structure. Through thoughtful ROI calculations, quality assurance, and outstanding communication, American Chemet Corporation has agreed to invest in a production expansion for the BCC product line. Risk management, expert procurement methods, exceptional negotiation skills, and redundancy in supply chain allows this project to be a succss and hit payback periods soon than expected.
 
-Result: I successfully completed my application within deadline criteria and learned how to use Vue to create a single-page application. I learned how to implement efficient code validation and dynamically alter the web page based on user interaction. I also learned how to utilize an API to manipulate data from user entered data fields using CRUD operations.
+Result: I successfully completed my application within deadline criteria and learned how to use many valuable tools and templates. The use of these tools provides quick and easy ways to perform repeatable calculations at different phases in a project. Additionally, the use of templates provides standardized wording and consistancy of presentation, making the extremely complex world of project management a breeze. Even though this project has fictional elements, the results lead the reader to believe this was a legit project.
 
-Reflection: I was desperately in need of a simple, fast, and robust cataloguing system for all of my physical media collections. Using the single page application (SPA) approach, I was able to create a more responsive and user-friendly web experience.
-
-
-## Vue CLI commands to run application in Visual Studio Code
-
-To launch Node.js backend:
-```
-npm run backend
-```
-
-To run Vue.js frontend:
-```
-npm run serve
-```
-
-## Welcome page
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125919.png)
-
-## Album List page
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125933.png)
-
-## Edit Album page
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125940.png)
-
-## Add Album page
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130111.png)
-
-## Validation and Confirmation pages
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130123.png)
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130134.png)
-
-## Displaying New Album (from Add Album)
-
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130143.png)
+Reflection: I had no idea what "Project Management" was until I started in this course. Preparing all of the required documents, performing estimations, and building out project plans meant little to nothing from a buisness perspective, but now I feel confident conversing about project related requirements.
