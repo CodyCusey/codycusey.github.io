@@ -1,51 +1,49 @@
 # ACC Asset Logging System
 
-My Album Tracking Application I created as a single page application (SPA) using Vue.
+My participation in designing, configuring, and programming an asset logging and reporting system.
 
-Challenge: Design a web application that allows the user to add, delete, edit, and view albums in their collection.
+Challenge: Normalize Data and migrate away from user managed spreadsheets. Implement web based data entry system, backend database to store, front end reporting and UI.
 
-Context: For the final project in my Client-Side Programming class I needed to create some type of web application. I created a web app that allows the user to manage their physical media library in a digital format. The single page configuration allows for a quick and responsive UI for adding new albums, editing information on previous entries, deleting entries, or simply viewing their collection.
+Context: For years, spreadsheets have rules and fooled the data landscape at American Chemet Corporation. By implementing an asset logging and reporting system, we will be able to use and record all producion related entries for each asset defined. By the clever use of stored procedures, functional logic, and dynamic SQL, this system can quickly and easily record asset utilization into a database, querey and manipulate as desired, and finally reported back to a defined user group. It's just the tip of the data landscape iceberg for American Chemet Corporation.
 
-Action: Using Visual Studio Code and Vue, I created a Home view that clearly directs the user to the options available. From the Album Info selection, the user is presented with a list of all items in their collection. This is where the user can peruse their media library, and make a selection for editing. Once in the editing view, the user can alter certain attributes to update the selected album to better represent the version in their collection. From the Add Album selection, the user can enter in information to be added as a new entry into the collection. The AlbumID was left as a manual entry, with uniqueness validated intentionally. Certain cataloguing systems having specific naming conventions and this flexibility allows user to curate to their organizational specifications. This app is designed to only run on the client side, so there is technically no back-end development. The data is collected and stored in JSON formatting in a local file build into the app. The use of an API handles all the CRUD operations to make use of the JSON data and data field entry.
+Action: Using several different technology tools and platforms, I assisted in creating and designing a Microsoft SQL Database backend to store our user input asset logs. From there I worked to create several linking relational tables to allow the corresponding user input fields to logically match row / column configuration. Once the data was logged, the final piece was to have a "public" report available. Using SQL Server Reporting Services (SSRS) Report Builder, I was able to easily call my nested store procedure to dynamically generate
+the fields to be placed in the report table.
 
-Result: I successfully completed my application within deadline criteria and learned how to use Vue to create a single-page application. I learned how to implement efficient code validation and dynamically alter the web page based on user interaction. I also learned how to utilize an API to manipulate data from user entered data fields using CRUD operations.
+Result: I successfully completed my contirbutions to the system and project within project deadline. I was able to collect asset data from production operators (users) and store in a managable database. Furthermore I was able to create a frontend reporting service that can be only accessible to the designated user groups.
 
-Reflection: I was desperately in need of a simple, fast, and robust cataloguing system for all of my physical media collections. Using the single page application (SPA) approach, I was able to create a more responsive and user-friendly web experience.
+Reflection: American Chemet Corporation has been plagued by technology deficits for as long as I have been a team member. By leaning into new data management systems and normalizing complex datasets, American Chemet Corporation will propel itself into the spot of world leader in not one, but a family metal based chemicals and powders.
 
 
 ## Vue CLI commands to run application in Visual Studio Code
 
-To launch Node.js backend:
+To run Stored Procedure:
 ```
-npm run backend
-```
-
-To run Vue.js frontend:
-```
-npm run serve
+EXEC [!_ACC_sp_Core] @AssetID = 6
 ```
 
-## Welcome page
+## SS 1
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125919.png)
+![image]()
 
-## Album List page
+## SS 2
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125933.png)
+![image]()
 
-## Edit Album page
+## SS 3
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20125940.png)
+![image]()
 
-## Add Album page
+## SS 4
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130111.png)
+![image]()
 
-## Validation and Confirmation pages
+## SS 5
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130123.png)
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130134.png)
+![image]()
 
-## Displaying New Album (from Add Album)
+## SS 6
+![image]()
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f7550c36f7da14ffd0d660681e323f3de374ec69/Projects/AlbumTrackerVue/src/assets/Screenshot%202025-04-22%20130143.png)
+## SS 7
+
+![image]()
