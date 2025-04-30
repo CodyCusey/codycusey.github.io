@@ -1,2 +1,11 @@
-# codycusey.github.io
-Cody Cusey's GitHub Portfolio Technology Security - Social Engineering
+# Social Engineering Research Paper
+
+Challenge: Perform a deep dive into the inner-workings of social engineering and its' impact on cyber security.
+
+Context: Social engineering is a manipulation technique used to exploit humans to gain access to confidential information, systems, or physical locations. Unlike traditional hacking methods that rely on technical vulnerabilities, social engineers feast on humans. This can occur through different mediums, including in-person interactions, phone calls, emails, social media. Additionally, it can manifest itself through physical items like fake IDs or USB drives. In this paper, my goal is to delve deeper into understanding the importance of social engineering including: a brief history and evolution, the different attack types, precautionary measures, culture, awareness, mitigation techniques, education, real world examples, and future trends.
+
+Action: By reading use cases, articles, and research papers, I was able to gain a thorough understanding of the inner-workings of a successful social engineering attack. One of the earliest attack types is known as Phishing. This involves sending emails or messages that appear to be from legitimate sources, tricking recipients into disclosing personal information, passwords, or clicking on malicious links. These emails typically contain urgent requests, alarming statements, or enticing offers, prompting recipients to act immediately, without considering the potential implications. Attacks like this and many others are more elaborately explained in the attached paper.
+
+Result: I successfully completed my investigation into the inner-workings of social engineering. This include topics such as history, attack types, and real-world examples. After completion of the research paper, I had a much more thorough understanding of the broad scope that is social engineering. The main lesson learned in this project is: "Whenever there is a human element, there will be human error." We will always be the problem and the solution.
+
+Reflection: I was interested in improving my knowledge and understanding of social engineering, related attacks, use cases, and prevention techniques. By performing extensive research into the topic, I was able to gain great insight into the inner-workings of social egineers.
