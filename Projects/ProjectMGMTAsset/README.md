@@ -12,38 +12,3 @@ the fields to be placed in the report table.
 Result: I successfully completed my contirbutions to the system and project within project deadline. I was able to collect asset data from production operators (users) and store in a managable database. Furthermore I was able to create a frontend reporting service that can be only accessible to the designated user groups.
 
 Reflection: American Chemet Corporation has been plagued by technology deficits for as long as I have been a team member. By leaning into new data management systems and normalizing complex datasets, American Chemet Corporation will propel itself into the spot of world leader in not one, but a family metal based chemicals and powders.
-
-
-## Vue CLI commands to run application in Visual Studio Code
-
-To run Stored Procedure:
-```
-EXEC [!_ACC_sp_Core] @AssetID = 6
-```
-
-## SS 1
-
-![image]()
-
-## SS 2
-
-![image]()
-
-## SS 3
-
-![image]()
-
-## SS 4
-
-![image]()
-
-## SS 5
-
-![image]()
-
-## SS 6
-![image]()
-
-## SS 7
-
-![image]()
