@@ -12,12 +12,12 @@ Reflection: I was interested in testing my own code reading skills and overall k
 
 ## value.length improper validation
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f253123b064f56d0f7e8b8f5f158e8c0e0c6bf28/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190553.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190553.png)
 
 ## SQL Injection Vulnerability
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f253123b064f56d0f7e8b8f5f158e8c0e0c6bf28/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190654.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190654.png)
 
 ## Password Logging in clear text
 
-![image](https://github.com/CodyCusey/codycusey.github.io/blob/f253123b064f56d0f7e8b8f5f158e8c0e0c6bf28/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190725.png)
+![image](https://github.com/CodyCusey/codycusey.github.io/blob/d8c2be63a3ea8156ff47e5ac3513e2874ebfb5d6/Projects/SecurityCodeReading/assets/Screenshot%202025-04-28%20190725.png)
